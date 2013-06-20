@@ -1,0 +1,10 @@
+﻿1. Check argument have value with correct type. [this class library accept 4 types.( string as 0, String array as 1, Int32 as 2, bool as 3)]
+
+	a). Add some argument with integer value or bool value. such as 
+			CommandLineParser.AddOptionalField("MainVersion", ArgumentStruct._int32, "4.0");
+			CommandLineParser.AddOptionalField("MajorVersion", ArgumentStruct._int32, "30319");
+	b). Call the Parse() with below argument
+			string[] argsParse = { "/run:", "/run:", "-Arch:", "/MainVersion:test", "/Import:ImportValue", "/Recurse:Recurse" }
+
+	c). Verify, You get correct exception.
+			Same way, try to boolen
